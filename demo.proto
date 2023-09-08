@@ -38,7 +38,7 @@ message Question {
 	string body = 2;
   }
   
-  service Umka {
+  service Demo {
 	rpc getQuestion(Student) returns(Question) {}
   
 	rpc sendAnswer(Answer) returns(Evaluation) {}

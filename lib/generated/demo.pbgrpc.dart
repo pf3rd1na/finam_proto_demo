@@ -19,34 +19,34 @@ import 'demo.pb.dart' as $0;
 
 export 'demo.pb.dart';
 
-@$pb.GrpcServiceName('Umka')
-class UmkaClient extends $grpc.Client {
+@$pb.GrpcServiceName('Demo')
+class DemoClient extends $grpc.Client {
   static final _$getQuestion = $grpc.ClientMethod<$0.Student, $0.Question>(
-      '/Umka/getQuestion',
+      '/Demo/getQuestion',
       ($0.Student value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Question.fromBuffer(value));
   static final _$sendAnswer = $grpc.ClientMethod<$0.Answer, $0.Evaluation>(
-      '/Umka/sendAnswer',
+      '/Demo/sendAnswer',
       ($0.Answer value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Evaluation.fromBuffer(value));
   static final _$getTutorial = $grpc.ClientMethod<$0.Student, $0.AnsweredQuestion>(
-      '/Umka/getTutorial',
+      '/Demo/getTutorial',
       ($0.Student value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.AnsweredQuestion.fromBuffer(value));
   static final _$getExam = $grpc.ClientMethod<$0.Student, $0.Exam>(
-      '/Umka/getExam',
+      '/Demo/getExam',
       ($0.Student value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Exam.fromBuffer(value));
   static final _$takeExam = $grpc.ClientMethod<$0.Answer, $0.Evaluation>(
-      '/Umka/takeExam',
+      '/Demo/takeExam',
       ($0.Answer value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.Evaluation.fromBuffer(value));
   static final _$techInterview = $grpc.ClientMethod<$0.InterviewMessage, $0.InterviewMessage>(
-      '/Umka/techInterview',
+      '/Demo/techInterview',
       ($0.InterviewMessage value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.InterviewMessage.fromBuffer(value));
 
-  UmkaClient($grpc.ClientChannel channel,
+  DemoClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options,
@@ -77,11 +77,11 @@ class UmkaClient extends $grpc.Client {
   }
 }
 
-@$pb.GrpcServiceName('Umka')
-abstract class UmkaServiceBase extends $grpc.Service {
-  $core.String get $name => 'Umka';
+@$pb.GrpcServiceName('Demo')
+abstract class DemoServiceBase extends $grpc.Service {
+  $core.String get $name => 'Demo';
 
-  UmkaServiceBase() {
+  DemoServiceBase() {
     $addMethod($grpc.ServiceMethod<$0.Student, $0.Question>(
         'getQuestion',
         getQuestion_Pre,
